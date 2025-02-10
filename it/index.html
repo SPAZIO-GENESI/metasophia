@@ -34,6 +34,17 @@
 
     // Initial redirect based on browser language
     window.onload = function() {
+      document.getElementById("myForm").reset();
+
+      const urlParams = new URLSearchParams(window.location.search);
+    // Controlla se il parametro 'thankyou' è presente
+    if (urlParams.has('thankyou')) {
+        // Nascondi il form
+        document.getElementById('myForm').style.display = 'none';
+        // Mostra il messaggio di ringraziamento
+        document.getElementById('thankYouMessage').style.display = 'block';
+    }
+
       var selectedLang = sessionStorage.getItem('selectedLanguage');
             var userLang = selectedLang || getBrowserLanguage();
             var folderPath = getFolderPath(userLang);
@@ -199,11 +210,12 @@
                 </h5>
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4 col-sm6-6 col-sm-offset-3 ">
-                      <form class="form-inline contact-form" role="form" action="https://api.web3forms.com/submit" method="POST">
+                      <form id="myForm" class="form-inline contact-form" role="form" action="https://api.web3forms.com/submit" method="POST">
                         <input type="hidden" name="access_key" value="6e4fccb9-86b3-4f92-b50c-ca91afcfbaa7" />
                         <input type="hidden" name="subject" value="METASOPHIA: new mailing subscribtion" />
                         <input type="hidden" name="from_name" value="MS-SG" />
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <input type="hidden" name="redirect" value="https://metasophia.spaziogenesi.org/it/?thankyou=true" />
                         <div class="form-group">
                           <label for="name" class="sr-only form-label">Nome</label>
                           <input id="name" name="name" class="form-input form-control transparent" placeholder="Il tuo nome" type="text" />
@@ -213,7 +225,10 @@
                           <input id="email" name="email" type="email" class="form-input form-control transparent" placeholder="la tua email">
                         </div>
                       <button type="submit" class="form-submit btn btn-danger btn-fill">Aggiornami</button>
-                    </form>
+                      </form>
+                      <div id="thankYouMessage" style="display: none;">
+                        Grazie per l'interesse! Ti terremo aggiornato/a.
+                    </div>
                     </div>
                 </div>
             </div>
