@@ -34,6 +34,17 @@
 
     // Initial redirect based on browser language
     window.onload = function() {
+      document.getElementById("myForm").reset();
+
+      const urlParams = new URLSearchParams(window.location.search);
+      // Controlla se il parametro 'thankyou' è presente
+      if (urlParams.has('thankyou')) {
+        // Nascondi il form
+        document.getElementById('subscribe').style.display = 'none';
+        // Mostra il messaggio di ringraziamento
+        document.getElementById('thankYouMessage').style.display = 'block';
+      }
+
       var selectedLang = sessionStorage.getItem('selectedLanguage');
             var userLang = selectedLang || getBrowserLanguage();
             var folderPath = getFolderPath(userLang);
@@ -192,7 +203,10 @@
         
         <div class="content">
             <h4 class="motto">Verständnis und Unterstützung für Metainformationen in künstlerischen Arbeiten</h4>
-            <div class="subscribe">
+            <div id="thankYouMessage" style="display: none;" class="motto">
+              Vielen Dank für Ihr Interesse! Wir halten Sie auf dem Laufenden.
+            </div>
+            <div id="subscribe" class="subscribe">
                 <h5 class="info-text">
                   Abonnieren Sie die Liste, um auf dem Laufenden zu bleiben. 
                 </h5>
@@ -202,7 +216,7 @@
                         <input type="hidden" name="access_key" value="6e4fccb9-86b3-4f92-b50c-ca91afcfbaa7" />
                         <input type="hidden" name="subject" value="METASOPHIA: new mailing subscribtion" />
                         <input type="hidden" name="from_name" value="MS-SG" />
-                        
+                        <input type="hidden" name="redirect" value="https://metasophia.spaziogenesi.org/de/?thankyou=true" />
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                         <div class="form-group">
                           <label for="name" class="sr-only form-label">Name</label>

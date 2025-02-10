@@ -34,6 +34,17 @@
 
     // Initial redirect based on browser language
     window.onload = function() {
+      document.getElementById("myForm").reset();
+
+      const urlParams = new URLSearchParams(window.location.search);
+      // Controlla se il parametro 'thankyou' è presente
+      if (urlParams.has('thankyou')) {
+        // Nascondi il form
+        document.getElementById('subscribe').style.display = 'none';
+        // Mostra il messaggio di ringraziamento
+        document.getElementById('thankYouMessage').style.display = 'block';
+      }
+
       var selectedLang = sessionStorage.getItem('selectedLanguage');
             var userLang = selectedLang || getBrowserLanguage();
             var folderPath = getFolderPath(userLang);
@@ -193,7 +204,10 @@
         
         <div class="content">
             <h4 class="motto">compréhension et prise en charge des méta-informations dans les œuvres artistiques</h4>
-            <div class="subscribe">
+            <div id="thankYouMessage" style="display: none;" class="motto">
+              Merci pour votre intérêt ! Nous vous tiendrons au courant.
+            </div>
+            <div id="subscribe" class="subscribe">
                 <h5 class="info-text">
                   Abonnez-vous à la liste pour rester à jour. 
                 </h5>
@@ -204,6 +218,7 @@
                         <input type="hidden" name="subject" value="METASOPHIA: new mailing subscribtion" />
                         <input type="hidden" name="from_name" value="MS-SG" />
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <input type="hidden" name="redirect" value="https://metasophia.spaziogenesi.org/fr/?thankyou=true" />
                         <div class="form-group">
                           <label for="name" class="sr-only form-label">Nom</label>
                           <input id="name" name="name" class="form-input form-control transparent" placeholder="Ton nom" type="text" />
