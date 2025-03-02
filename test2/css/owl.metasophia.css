@@ -20,7 +20,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* Cambia l'opacità per schiarire di più o di meno */
+    background-color: rgba(255, 255, 255, 0.3); /* Cambia l'opacità per schiarire di più o di meno */
 }
 
 .hero-content {
