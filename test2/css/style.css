@@ -49,7 +49,7 @@ h3,
 h4,
 h5,
 h6 {
-    text-transform: uppercase;
+   // text-transform: uppercase;
     //font-weight: 700;
 }
 
@@ -169,6 +169,14 @@ li {
         -moz-transition: all .3s;
         -o-transition: all .3s;
         transition: all .3s;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-brand .logo {
+        height: 60px; /* Adjust the height as needed */
+        margin-right: 30px; /* Space between the logo and the text */
     }
 
     .navbar-default .navbar-nav>.active>a {
@@ -1581,7 +1589,7 @@ footer.style-1 .footer-link li {
 
 
 .call-to-action {
-    background: url(../images/parallax/call-to.jpg);
+    background: url(/images/3079617.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: 50% 90%;
