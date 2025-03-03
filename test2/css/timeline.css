@@ -96,8 +96,9 @@ ul.custom-list li::before {
   }
   
   .card {
-    padding: 0px 30px;
+    padding: 0px 10px;
     position: relative;
+    width: 200px;
     border-radius: 6px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
