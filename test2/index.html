@@ -1447,12 +1447,12 @@ Styleswitcher End
     }
 
     // Controlla i parametri GET all'apertura della pagina
-    window.onload = function() {
+    document.addEventListener('DOMContentLoaded', function() {
         const params = getQueryParams();
-        if (params['esito'] === '1') {
+        if (params['confirm']) {
             showAlert('Conferma: ' + params['confirm']);
         }
-    };
+    });
 </script>
 </body>
 
