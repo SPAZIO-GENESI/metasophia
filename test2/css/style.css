@@ -1129,7 +1129,7 @@ and (min-width : 551px){
 /*----------------------------------------------------------*/
 
 .fun-facts {
-    background: url(../images/parallax/bg-02.jpg);
+    background: url(../images/3079617.jpg);
     background-attachment: fixed;
     background-size: cover;
     padding-top: 120px;
@@ -1589,7 +1589,7 @@ footer.style-1 .footer-link li {
 
 
 .call-to-action {
-    background: url(/images/3079617.jpg);
+    background: url(../images/new_parallax.png);
     background-attachment: fixed;
     background-size: cover;
     background-position: 50% 90%;
