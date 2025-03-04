@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MetaSophia AI & DL understands and helps with arts meta information</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="asset/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    
+    
+    <!-- Animate CSS -->
+    <link href="css/animate.css" rel="stylesheet" >
+    
+    <!-- Owl-Carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.css" >
+    <link rel="stylesheet" href="css/owl.theme.css" >
+    <link rel="stylesheet" href="css/owl.transitions.css" >
+
+
+    <!--METASOPHIA-->
+    <link rel="stylesheet" href="css/owl.metasophia.css" >
+    <link rel="stylesheet" href="css/timeline.css" >
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    
+    <!-- Colors CSS -->
+    <link rel="stylesheet" type="text/css" href="css/color/green.css">
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="/ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/ico/favicon-16x16.png">
+    <link rel="manifest" href="/ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    
+    <!-- Colors CSS -->
+    <link rel="stylesheet" type="text/css" href="css/color/green.css" title="green">
+    <link rel="stylesheet" type="text/css" href="css/color/light-red.css" title="light-red">
+    <link rel="stylesheet" type="text/css" href="css/color/blue.css" title="blue">
+    <link rel="stylesheet" type="text/css" href="css/color/light-blue.css" title="light-blue">
+    <link rel="stylesheet" type="text/css" href="css/color/yellow.css" title="yellow">
+    <link rel="stylesheet" type="text/css" href="css/color/light-green.css" title="light-green">
+
+    <!-- Custom Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    
+    
+    <!-- Modernizer js -->
+    <script src="js/modernizr.custom.js"></script>
+
+    
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//matomodocker.azurewebsites.net/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '11']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <noscript><p><img referrerpolicy="no-referrer-when-downgrade" src="//matomodocker.azurewebsites.net/matomo.php?idsite=11&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+  <!-- End Matomo Code -->
+  
+</head>
+
+<body class="index">
+    <div class="container mt-5">
+        <div id="alert-container"></div>
+    </div>
+    
+    
+    <!-- Styleswitcher
+================================================== 
+        <div class="colors-switcher">
+            <a id="show-panel" class="hide-panel"><i class="fa fa-tint"></i></a>        
+                <ul class="colors-list">
+                    <li><a title="Light Red" onClick="setActiveStyleSheet('light-red'); return false;" class="light-red"></a></li>
+                    <li><a title="Blue" class="blue" onClick="setActiveStyleSheet('blue'); return false;"></a></li>
+                    <li class="no-margin"><a title="Light Blue" onClick="setActiveStyleSheet('light-blue'); return false;" class="light-blue"></a></li>
+                    <li><a title="Green" class="green" onClick="setActiveStyleSheet('green'); return false;"></a></li>
+                    
+                    <li class="no-margin"><a title="light-green" class="light-green" onClick="setActiveStyleSheet('light-green'); return false;"></a></li>
+                    <li><a title="Yellow" class="yellow" onClick="setActiveStyleSheet('yellow'); return false;"></a></li>
+                    
+                </ul>
+
+        </div>  
+Styleswitcher End
+================================================== -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>   
+                <a class="navbar-brand page-scroll" href="#page-top"><img class="logo" src="images/logos/Asset 3.png"><span> MetaSophia</span></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#feature">Feature</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about-us">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#service">Areas</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#latest-news">Latest News</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#partner">Partner</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    
+    
+    
+    <!-- Start Home Page Slider -->
+    <section id="page-top">
+        <!-- Carousel -->
+        <div id="main-slide" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#main-slide" data-slide-to="0" class="active"></li>
+                <li data-target="#main-slide" data-slide-to="1"></li>
+                <li data-target="#main-slide" data-slide-to="2"></li>
+            </ol>
+            <!--/ Indicators end-->
+
+            <!-- Carousel inner -->
+            <div class="carousel-inner">
+                <div class="item active hero">
+                    <img class="img-responsive hero-image" src="./images/ezgif-319a72c022b8cd.gif" alt="slider">
+                    <div class="overlay"></div>
+                    <div class="slider-content">
+                        <div class="col-md-12 text-center">
+                            <h1 class="animated3">
+                                <span><strong>Meta</strong> informations and <strong>Sophia</strong> wisdom</span>
+                            </h1>
+                            <p class="animated2">understands and helps with arts meta information</p>	
+                            <a href="#feature" class="page-scroll btn btn-primary animated1">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!--/ Carousel item end -->
+                
+                <div class="item hero">
+                    <img class="img-responsive hero-image" src="./images/ezgif-37cddaba783a6c.gif" alt="slider">
+                    <div class="overlay"></div>
+                    <div class="slider-content">
+                        <div class="col-md-12 text-center">
+                            <h1 class="animated1">
+                    		  <span><strong>The present</strong> for understanding <strong>the past</strong></span>
+                    	    </h1>
+                            <p class="animated2">A new aid for cataloging and archiving and understanding contents</p>
+                            <a href="#feature" class="page-scroll btn btn-primary animated3">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!--/ Carousel item end -->
+                
+                <div class="item hero">
+                    <img class="img-responsive hero-image" src="images/ezgif-340059fa5a1f7e.gif" alt="slider">
+                    <div class="overlay"></div>
+                    <div class="slider-content">
+                        <div class="col-md-12 text-center">
+                            <h1 class="animated2">
+                                <span>channel <strong>skills</strong> into new <strong>opportunities</strong></span>
+                            </h1>
+                            <p class="animated1">combine automatism and perceptive criticism to combine rationality and intuition</p>	
+                             <a class="animated3 slider btn btn-primary btn-min-block" href="#">Get Now</a><a class="animated3 slider btn btn-default btn-min-block" href="#">Live Demo</a>
+                                
+                        </div>
+                    </div>
+                </div>
+                <!--/ Carousel item end -->
+            </div>
+            <!-- Carousel inner end-->
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#main-slide" data-slide="prev">
+                <span><i class="fa fa-angle-left"></i></span>
+            </a>
+            <a class="right carousel-control" href="#main-slide" data-slide="next">
+                <span><i class="fa fa-angle-right"></i></span>
+            </a>
+        </div>
+        <!-- /carousel -->
+    </section>
+    <!-- End Home Page Slider -->
+
+    
+    
+    <!-- Start Feature Section 
+        <section id="feature" class="feature-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="feature">
+                            <i class="fa fa-magic"></i>
+                            <div class="feature-content">
+                                <h4>Web Design</h4>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                            </div>
+                        </div>
+                    </div> /.col-md-3 
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="feature">
+                            <i class="fa fa-gift"></i>
+                            <div class="feature-content">
+                                <h4>Graphics Design</h4>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                            </div>
+                        </div>
+                    </div><!-- /.col-md-3 
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="feature">
+                            <i class="fa fa-wordpress"></i>
+                            <div class="feature-content">
+                                <h4>Wordpress Theme</h4>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                            </div>
+                        </div>
+                    </div><!-- /.col-md-3 
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="feature">
+                            <i class="fa fa-plug"></i>
+                            <div class="feature-content">
+                                <h4>Wordpress Plugin</h4>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.row 
+            
+            </div><!-- /.container 
+        </section>
+        <!-- End Feature Section -->
+    
+    
+    <!-- Start Call to Action Section -->
+    <section class="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Everything revolves around the concept of the machine, it is not conceived as a
+                        mechanical or digital device but as a basic unit intrinsic in every
+                        tangible element.<br>
+                        Starting from this analysis, reality would appear as the product of a set of
+                        interconnected energy flows.<BR>Everything is a flow, everything is made up of machines
+                        of different types.<br> Every existing unit seems inevitably induced to
+                        produce something else. (Sara Dias)</h3>
+                    <button type="submit" class="btn btn-primary">We are looking for financiers</button>
+                </div>
+            </div>
+          
+        </div>
+    </section>
+    <!-- End Call to Action Section -->
+    
+    
+    
+    <!-- Start Portfolio Section 
+        <section id="portfolio" class="portfolio-section-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h3>Our Portfolio</h3>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        
+                        <!-- Start Portfolio items 
+                        <ul id="portfolio-list">
+                            <li>
+                                <div class="portfolio-item">
+                                    <img src="images/portfolio/img1.jpg" class="img-responsive" alt="" />
+                                    <div class="portfolio-caption">
+                                        <h4>Portfolio Title</h4>
+                                        <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
+                                        <a href="#" class="link-2"><i class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="portfolio-item">
+                                    <img src="images/portfolio/img2.jpg" class="img-responsive" alt="" />
+                                    <div class="portfolio-caption">
+                                        <h4>Portfolio Title</h4>
+                                        <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
+                                        <a href="#" class="link-2"><i class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="portfolio-item">
+                                    <img src="images/portfolio/img3.jpg" class="img-responsive" alt="" />
+                                    <div class="portfolio-caption">
+                                        <h4>Portfolio Title</h4>
+                                        <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
+                                        <a href="#" class="link-2"><i class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="portfolio-item">
+                                    <img src="images/portfolio/img4.jpg" class="img-responsive" alt="" />
+                                    <div class="portfolio-caption">
+                                        <h4>Portfolio Title</h4>
+                                        <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
+                                        <a href="#" class="link-2"><i class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="portfolio-item">
+                                    <img src="images/portfolio/img5.jpg" class="img-responsive" alt="" />
+                                    <div class="portfolio-caption">
+                                        <h4>Portfolio Title</h4>
+                                        <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
+                                        <a href="#" class="link-2"><i class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="portfolio-item">
+                                    <img src="images/portfolio/img6.jpg" class="img-responsive" alt="" />
+                                    <div class="portfolio-caption">
+                                        <h4>Portfolio Title</h4>
+                                        <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
+                                        <a href="#" class="link-2"><i class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                        </ul>
+                        <!-- End Portfolio items 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Portfolio Section 
+    
+    <!-- Start Portfolio Modal Section 
+        <div class="section-modal modal fade" id="portfolio-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h3>Portfolio Details</h3>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-md-6">
+                            <img src="images/portfolio/img1.jpg" class="img-responsive" alt="..">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="images/portfolio/img1.jpg" class="img-responsive" alt="..">
+                        </div>
+                        
+                    </div><!-- /.row 
+                </div>                
+            </div>
+        </div>
+        <!-- End Portfolio Modal Section 
+    -->
+    
+    <!-- Start About Us Section -->
+    <section id="about-us" class="about-us-section-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title text-center">
+                            <h3>About Us</h3>
+                            <p>there are more and more of us and each of us has an idea</p>
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="col-md-6">
+                    <div class="welcome-section text-center">
+                        <img src="images/monica_toscani_03_300125_meden_agan_56_web.jpg" class="img-responsive" alt="..">
+                        <caption>&copy;Monica Toscani, Meden Agan, 25/01/30</caption>
+                        <h4>Core Mission</h4>
+                        <div class="border"></div>
+                        <p>create an independent laboratory for permanent and collective experimentation of experiences. Exhibitions, cultural events, study room, documentation center, management, projects.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="welcome-section text-center">
+                        <img src="images/Spazio-Genesi-4.jpeg" class="img-responsive" alt="..">
+                        <h4>Projects</h4>
+                        <div class="border"></div>
+                        <p>starting from the contingency of a necessity we feel the need to modify the existing and use the critical capacity to realize what our imagination imagines. we will propose projects circumstantial to art.</p>
+                    </div>
+                </div>
+                
+            </div><!-- /.row -->            
+            
+        </div><!-- /.container -->
+    </section>
+    <!-- End About Us Section -->
+
+    <div class="about-us-section-2">
+        <div class="container py-5">
+            <div class="row">
+                
+                <div class="col-md-6">
+                    <div class="container py-5">
+                        
+                    
+                        <div class="main-timeline">
+                            
+                            <div class="timeline left">
+                            <div class="card">
+                                <div class="card-body p-4">
+                                <h3>2025 1Q</h3>
+                                <p class="mb-0">testing methods and prototype creation on premise, project presentation, training the model, research of stakeholders, financiers, clients</p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="timeline right">
+                            <div class="card">
+                                <div class="card-body p-4">
+                                <h3>2025 2Q</h3>
+                                <p class="mb-0">training the model, fine-tuning the prompts, move the models on cloud, public demo interfaces.</p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="timeline left">
+                            <div class="card">
+                                <div class="card-body p-4">
+                                <h3>2025 3Q</h3>
+                                <p class="mb-0">model correction, designing a new context, we will most likely be busy with a client</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="container py-5" style="max-width: 50%;">
+                        <h3  style="font-weight: 900;">Areas of action</h3>
+                        <p>The project is divided into two main areas of action:</p>
+                        <ul class="custom-list">
+                            <li>Development of an advanced prompt engineering technique: This area focuses on the creation of specific and optimized prompts for large-scale AI models (72B parameters), in order to improve the accuracy in identifying printing techniques.</li>
+                            <li>Development and training of a deep learning model: This area involves the creation and training of a deep learning model specifically designed to recognize printing techniques through the visual analysis of images.</li>
+                        </ul>
+                        <h3  style="font-weight: 900;">Project targets</h3>
+                        <ul class="custom-list">
+                            <li>
+                                Initial Phase: Automatically identify pre-photographic printing technologies (e.g. lithography, engraving, woodcut, etching, etc.) through automated visual analysis.
+                            </li>
+                            <li>
+                                Next Step: Extend the functionality to recognize photographic printing techniques (e.g. albumin, silver gelatin, cyanotypes, etc.).
+                            </li>
+                        </ul>
+                        
+                        <h3  style="font-weight: 900;">Final applications</h3>
+                        <p>Provide effective assistance for:</p>
+                        <ul class="custom-list">
+                            <li>
+                                Digital archiving of art collections.
+                            </li>
+                            <li>
+                                Restoration of graphic works through a better understanding of the original techniques used.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>  
+    <!-- Start About Us Section 2 -->
+     <!--
+    <div class="about-us-section-2">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-6">
+                    
+                    <div class="skill-shortcode">
+                        
+                        <-- Progress Bar 
+                        <div class="skill">
+                            <p>Web Design</p>          
+                            <div class="progress">         
+                                <div class="progress-bar" role="progressbar"  data-percentage="60">
+                                    <span class="progress-bar-span" >60%</span>
+                                    <span class="sr-only">60% Complete</span>
+                                </div>
+                            </div>  
+                        </div>
+                        
+                        <!-- Progress Bar 
+                        <div class="skill">
+                            <p>HTML & CSS</p>          
+                            <div class="progress">         
+                                <div class="progress-bar" role="progressbar"  data-percentage="95">
+                                    <span class="progress-bar-span" >95%</span>
+                                    <span class="sr-only">95% Complete</span>
+                                </div>
+                            </div>  
+                        </div>
+                        
+                        <!-- Progress Bar 
+                        <div class="skill">
+                            <p>Wordpress</p>          
+                            <div class="progress">         
+                                <div class="progress-bar" role="progressbar"  data-percentage="80">
+                                    <span class="progress-bar-span" >80%</span>
+                                    <span class="sr-only">80% Complete</span>
+                                </div>
+                            </div>  
+                        </div>
+                        
+                        <!-- Progress Bar 
+                        <div class="skill">
+                            <p>Joomla</p>          
+                            <div class="progress">         
+                                <div class="progress-bar" role="progressbar"  data-percentage="100">
+                                    <span class="progress-bar-span" >100%</span>
+                                    <span class="sr-only">100% Complete</span>
+                                </div>
+                            </div>  
+                        </div>
+                        
+                        <!-- Progress Bar 
+                        <div class="skill">
+                            <p>Extension</p>          
+                            <div class="progress">         
+                                <div class="progress-bar" role="progressbar"  data-percentage="70">
+                                    <span class="progress-bar-span" >70%</span>
+                                    <span class="sr-only">70% Complete</span>
+                                </div>
+                            </div>  
+                        </div>
+                                                            
+                    </div>
+                    
+                </div>
+                
+
+                <div class="col-md-6">
+                    <div id="carousel-example-generic" class="carousel slide about-slide" data-ride="carousel">
+                        <!-- Indicators 
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="images/about-01.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="images/about-02.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="images/about-03.jpg" alt="">
+                            </div>
+    
+                        </div>
+  
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    -->
+
+
+
+    <!-- Start About Us Section 2 -->
+
+
+    
+
+    
+
+
+    <!-- Start Feature Section -->
+        <section id="service" class="services-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h3>Our Areas</h3>
+                            <p>functional, operational and imagined components</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 col-xs-12" style=" box-sizing: border-box; ">
+                        <div class="feature-2">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <i class="fa fa-magic"></i>
+                                    <div class="border"></div>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">72B PROMPT</h4>
+                                    <p>72B model query interface offline, a prompt engineering approach on QWENT engines.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.col-md-4 -->
+                    <div class="col-lg-4 col-sm-6 col-xs-12" style=" box-sizing: border-box; ">
+                        <div class="feature-2">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <i class="fa fa-database"></i>
+                                    <div class="border"></div>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">CUSTOM MODEL</h4>
+                                    <p>training and development of an original model for understanding printing techniques</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.col-md-4 -->
+                    <div class="col-lg-4 col-sm-6 col-xs-12" style=" box-sizing: border-box; ">
+                        <div class="feature-2">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <i class="fa fa-camera"></i>
+                                    <div class="border"></div>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Hardware tools</h4>
+                                    <p>tuning technologies for the greatest savings for the best results</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.col-md-4 -->
+                    <div class="col-lg-4 col-sm-6 col-xs-12" style=" box-sizing: border-box; ">
+                        <div class="feature-2">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <i class="fa fa-archive"></i>
+                                    <div class="border"></div>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Archiving</h4>
+                                    <p>development of automatic archiving methods</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.col-md-4 -->
+                    <div class="col-lg-4 col-sm-6 col-xs-12" style=" box-sizing: border-box; ">
+                        <div class="feature-2">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <i class="fa fa-camera-retro"></i>
+                                    <div class="border"></div>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">outdated photographic prints</h4>
+                                    <p>we would like to test the system for the recognition to obsolete photographic printing technologies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.col-md-4 -->
+                    <div class="col-lg-4 col-sm-6 col-xs-12" style=" box-sizing: border-box; ">
+                        <div class="feature-2">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <i class="fa fa-cube"></i>
+                                    <div class="border"></div>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">New Dimensions</h4>
+                                    <p>dynamic ability to imagine and test new applications and analysis models</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.col-md-4 -->
+                    
+                </div><!-- /.row -->
+            
+            </div><!-- /.container -->
+        </section>
+        <!-- End Feature Section -->
+    
+    
+    
+    <!-- Start Fun Facts Section -->
+    <section class="fun-facts">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                      <div class="counter-item">
+                        <i class="fa fa-cloud-upload"></i>
+                        <div class="timer" id="item1" data-to="10" data-speed="5000"></div>
+                        <h5>Art print processed</h5>                               
+                      </div>
+                    </div>  
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <div class="counter-item">
+                        <i class="fa fa-picture-o"></i>
+                        <div class="timer" id="item2" data-to="60" data-speed="5000"></div>
+                        <h5>Patterns</h5>                               
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <div class="counter-item">
+                        <i class="fa fa-code"></i>
+                        <div class="timer" id="item3" data-to="500" data-speed="5000"></div>
+                        <h5>Lines of code written</h5>                               
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <div class="counter-item">
+                        <i class="fa fa-cogs"></i>
+                        <div class="timer" id="item4" data-to="11705408" data-speed="5000"></div>
+                        <h5>Parameters</h5>                               
+                      </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Fun Facts Section -->
+
+
+
+    <!-- Start Team Member Section -->
+    <section id="team" class="team-member-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title text-center">
+                            <h3>Our Team</h3>
+                            <p>people in constant growth</p>
+                        </div>
+                </div>
+            </div>
+            
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="team-section">
+
+                                    <div class="our-team">
+
+                                        <div class="team-member">
+                                            <img src="images/team/max_meta.png" class="img-responsive" alt="">
+                                            <div class="team-details">
+                                                <h4>M. Camplone</h4>
+                                                <p>PM & coding</p>
+                                                <ul>
+                                                    <li><a href="https://www.linkedin.com/in/massimocamplone/ "><i class="fa fa-linkedin"></i></a></li>
+                                                    
+                                                </ul>
+                                                <br
+                                                <a href="https://spaziogenesi.org/biografie/bio.htm?artista=nevoanarua"><img  src="./images/metasophia_icon.png"></a>
+                                            </div>
+                                        </div>    
+
+                                        <div class="team-member">
+                                            <img src="images/team/manage-1.png" class="img-responsive" alt="">
+                                            <div class="team-details">
+                                                <h4></h4>
+                                                <p>Archive</p>
+                                                <ul>
+                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+    
+
+                                    <div class="team-member">
+                                        <img src="images/team/sara_meta.png" class="img-responsive" alt="">
+                                        <div class="team-details">
+                                            <h4>Sara Dias</h4>
+                                            <p>curatorship and critical texts</p>
+                                           
+                                                <a href="https://spaziogenesi.org/biografie/bio.htm?artista=saradias"><img  src="./images/metasophia_icon.png"></a>
+                                          
+                                        </div>
+                                    </div>
+ 
+
+
+
+                                    <div class="team-member">
+                                        <img src="images/team/manage-2.png" class="img-responsive" alt="">
+                                        <div class="team-details">
+                                            <h4></h4>
+                                            <p>Storage and photographic technologies</p>
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="team-member">
+                                        <img src="images/team/manage-3.png" class="img-responsive" alt="">
+                                        <div class="team-details">
+                                            <h4></h4>
+                                            <p>Photographic shooting</p>
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="team-member">
+                                        <img src="images/team/manage-4.png" class="img-responsive" alt="">
+                                        <div class="team-details">
+                                            <h4></h4>
+                                            <p>Photographic shooting</p>
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                    
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+    </section>
+    <!-- End Team Member Section -->
+
+
+
+    <!-- Start Pricing Table Section 
+    <div id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h3>Our Pricing Plan</h3>
+                            <p class="white-text">Duis aute irure dolor in reprehenderit in voluptate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    
+            <div class="row">
+                        
+                <div class="pricing">
+                        
+                        <div class="col-md-12">
+                            <div class="pricing-table">
+                                <div class="plan-name">
+								    <h3>Free</h3>
+                                </div>
+                                <div class="plan-price">
+                                    <div class="price-value">$49<span>.00</span></div>
+                                    <div class="interval">per month</div>
+                                </div>
+                                <div class="plan-list">
+                                    <ul>
+                                        <li>40 GB Storage</li>
+                                        <li>40GB Transfer</li>
+                                        <li>10 Domains</li>
+                                        <li>20 Projects</li>
+                                        <li>Free installation</li>
+                                    </ul>
+                                </div>
+                                <div class="plan-signup">
+                                    <a href="#" class="btn-system btn-small">Sign Up Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <div class="pricing-table">
+                                <div class="plan-name">
+								    <h3>Standard</h3>
+                                </div>
+                                <div class="plan-price">
+                                    <div class="price-value">$49<span>.00</span></div>
+                                    <div class="interval">per month</div>
+                                </div>
+                                <div class="plan-list">
+                                    <ul>
+                                        <li>40 GB Storage</li>
+                                        <li>40GB Transfer</li>
+                                        <li>10 Domains</li>
+                                        <li>20 Projects</li>
+                                        <li>Free installation</li>
+                                    </ul>
+                                </div>
+                                <div class="plan-signup">
+                                    <a href="#" class="btn-system btn-small">Sign Up Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="pricing-table">
+                                <div class="plan-name">
+								    <h3>Premium</h3>
+                                </div>
+                                <div class="plan-price">
+                                    <div class="price-value">$49<span>.00</span></div>
+                                    <div class="interval">per month</div>
+                                </div>
+                                <div class="plan-list">
+                                    <ul>
+                                        <li>40 GB Storage</li>
+                                        <li>40GB Transfer</li>
+                                        <li>10 Domains</li>
+                                        <li>20 Projects</li>
+                                        <li>Free installation</li>
+                                    </ul>
+                                </div>
+                                <div class="plan-signup">
+                                    <a href="#" class="btn-system btn-small">Sign Up Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <div class="pricing-table">
+                                <div class="plan-name">
+								    <h3>Professional</h3>
+                                </div>
+                                <div class="plan-price">
+                                    <div class="price-value">$49<span>.00</span></div>
+                                    <div class="interval">per month</div>
+                                </div>
+                                <div class="plan-list">
+                                    <ul>
+                                        <li>40 GB Storage</li>
+                                        <li>40GB Transfer</li>
+                                        <li>10 Domains</li>
+                                        <li>20 Projects</li>
+                                        <li>Free installation</li>
+                                    </ul>
+                                </div>
+                                <div class="plan-signup">
+                                    <a href="#" class="btn-system btn-small">Sign Up Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-12">
+                            <div class="pricing-table">
+                                <div class="plan-name">
+								    <h3>Premium</h3>
+                                </div>
+                                <div class="plan-price">
+                                    <div class="price-value">$49<span>.00</span></div>
+                                    <div class="interval">per month</div>
+                                </div>
+                                <div class="plan-list">
+                                    <ul>
+                                        <li>40 GB Storage</li>
+                                        <li>40GB Transfer</li>
+                                        <li>10 Domains</li>
+                                        <li>20 Projects</li>
+                                        <li>Free installation</li>
+                                    </ul>
+                                </div>
+                                <div class="plan-signup">
+                                    <a href="#" class="btn-system btn-small">Sign Up Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <div class="pricing-table">
+                                <div class="plan-name">
+								    <h3>Professional</h3>
+                                </div>
+                                <div class="plan-price">
+                                    <div class="price-value">$49<span>.00</span></div>
+                                    <div class="interval">per month</div>
+                                </div>
+                                <div class="plan-list">
+                                    <ul>
+                                        <li>40 GB Storage</li>
+                                        <li>40GB Transfer</li>
+                                        <li>10 Domains</li>
+                                        <li>20 Projects</li>
+                                        <li>Free installation</li>
+                                    </ul>
+                                </div>
+                                <div class="plan-signup">
+                                    <a href="#" class="btn-system btn-small">Sign Up Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+						
+						
+            </div>
+        </div>
+    </div>
+  End Pricing Table Section -->
+    
+    
+    
+    <!-- Start Latest News Section -->
+    <section id="latest-news" class="latest-news-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <h3>Latest News</h3>
+                        <p>We never sleep</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="latest-news">
+                    <div class="col-md-12">
+                        <div class="latest-post">
+                            <img  src="images/msonradixia.jpg" class="img-responsive" alt="">
+                            <h4><a href="https://www.radixia.ai/en/art/">MetaSophia on Radixia</a></h4>
+                            <div class="post-details">
+                                <span class="date"><strong>2</strong> <br>Mar , 2025</span>
+                                
+                            </div>
+                            <p>we are honored to have received the attention of a company attentive and projected towards innovation like Radixia. our first media and technological partner with which to reach the first strategic and functional objectives.</p>
+                            <a href="https://www.radixia.ai/en/art/" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div> 
+
+                    <div class="col-md-12">
+                        <div class="latest-post">
+                            <img src="images/metasophia_chat.jpg" class="img-responsive" alt="">
+                            <h4><a href="#">First Chat UI</a></h4>
+                            <div class="post-details">
+                                <span class="date"><strong>20</strong> <br>Feb , 2025</span>
+                                
+                            </div>
+                            <p>It may seem obvious but adapting to standards actually leads users to immediate productivity. However, the development station is no longer sufficient to contain the effort and we are actively seeking a cloud technology partner.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="latest-post">
+                            <img src="images/metasophia_confronti.jpg" class="img-responsive" alt="">
+                            <h4><a href="#">First Prediction Table</a></h4>
+                            <div class="post-details">
+                                <span class="date"><strong>14</strong> <br>Feb , 2025</span>
+                                
+                            </div>
+                            <p>A first prediction table, as simple as a lemon popsicle but it is only the first step..</p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="latest-post">
+                            <img src="images/metasophia_confusionmatrix.jpg" class="img-responsive" alt="">
+                            <h4><a href="#">Newbie confusion matrix</a></h4>
+                            <div class="post-details">
+                                <span class="date"><strong>06</strong> <br>Feb , 2025</span>
+                                
+                            </div>
+                            <p>We have more certainties with scratch cards but we have to start somewhere!.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="latest-post">
+                            <img src="images/metasophia_filesanalisys.jpg" class="img-responsive" alt="">
+                            <h4><a href="#">The first door</a></h4>
+                            <div class="post-details">
+                                <span class="date"><strong>30</strong> <br>Jan , 2025</span>
+                                
+                            </div>
+                            <p>knock knock, is it allowed?.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Latest News Section -->
+
+
+
+    
+    
+    
+    <!-- Start Testimonial Section 
+    <div id="testimonial" class="testimonial-section">
+        <div class="container">
+            Start Testimonials Carousel 
+            <div id="testimonial-carousel" class="testimonials-carousel">
+                Testimonial 1 
+                <div class="testimonials item">
+                    <div class="testimonial-content">
+                        <img src="images/testimonial/face_1.png" alt="" >
+                        <div class="testimonial-author">
+                            <div class="author">John Doe</div>
+                            <div class="designation">Organization Founder</div>
+                        </div>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque<br> laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+                    </div>
+                </div>
+                 Testimonial 2 
+                <div class="testimonials item">
+                    <div class="testimonial-content">
+                        <img src="images/testimonial/face_2.png" alt="" >
+                        <div class="testimonial-author">
+                            <div class="author">Jane Doe</div>
+                            <div class="designation">Lead Developer</div>
+                        </div>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia<br> consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    </div>
+                </div>
+                Testimonial 3 
+                <div class="testimonials item">
+                    <div class="testimonial-content">
+                        <img src="images/testimonial/face_3.png" alt="" >
+                        <div class="testimonial-author">
+                            <div class="author">John Doe</div>
+                            <div class="designation">Honorable Customer</div>
+                        </div>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit<br> anim laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+            End Testimonials Carousel 
+        </div>
+    </div>
+    End Testimonial Section -->
+    
+    
+
+    <!-- Clients Aside -->
+    <section id="partner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <h3>Our Honorable Partner</h3>
+                        <p>People and technology architectures</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="clients">
+ 
+                    <div class="col-md-12">
+                        <a href="https://radixia.ai/"><img src="images/logos/Asset 50.png" class="img-responsive" alt="Radixia.ai"></a>
+                    </div>
+                    
+                    <div class="col-md-12">
+                        <img src="images/logos/vuoto.png" class="img-responsive" alt="...">
+                    </div>
+
+                    <div class="col-md-12">
+                        <a href="https://spaziogenesi.org/"><img src="images/logos/Asset 51.png" class="img-responsive" alt="Spaziogenesi.org"></a>
+                    </div>
+
+                    <div class="col-md-12">
+                        <img src="images/logos/vuoto.png" class="img-responsive" alt="...">
+                    </div>
+                    
+                    <div class="col-md-12">
+                        <a href="https://tangram.page/"><img src="images/logos/Asset 54.png" class="img-responsive" alt="Tangram.page"></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title text-center">
+                        <h3>Contact With Us</h3>
+                        <p class="white-text">Duis aute irure dolor in reprehenderit in voluptate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate  action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="0ed97fbc-6f07-497c-b463-227d8533020c">
+                        <input type="hidden" name="redirect" value="https://metasophia.spaziogenesi.org/test2/index.html?esito=1">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Your Name *" name="name" id="name" required data-validation-required-message="Please enter your name.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email *" name="email" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Your Phone *" name="phone" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Your Message *" name="message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-contact-info">
+                        <h4>Contact info</h4>
+                        <ul>
+                            <li><strong>E-mail :</strong> metasophia@spaziogenesi.org</li>
+                            <li><strong>Web :</strong> spaziogenesi.org</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="footer-contact-info">
+                        <h4>Working Hours</h4>
+                        <ul>
+                            <li><strong>Mon-Fri :</strong> 5 pm to 7.30 pm</li>
+                            <li><strong>Sat :</strong> 9 am to 7.3 pm</li>
+                            <li><strong>Sunday :</strong> Closed</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="style-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                        <span class="copyright">Copyright &copy; <a href="https://guardiantheme.com">GuardinTheme</a> 2015</span>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="footer-social text-center">
+                            <ul>
+
+                                <li><a href="https://www.facebook.com/spaziogenesi/"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/spazio-genesi-ets/"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.instagram.com/spaziogenesi/"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-github"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="footer-link">
+                            <ul class="pull-right">
+                                <li><a href="#">Privacy Policy</a>
+                                </li>
+                                <li><a href="#">Terms of Use</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+    <div id="loader">
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+        </div>
+    </div>
+
+<!-- Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Last News</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="" class="img-responsive modal-image" alt="" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="messagebox" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>thanks for the message we will reply soon and keep in touch!</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- jQuery Version 2.1.1 -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="asset/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/count-to.js"></script>
+    <script src="js/jquery.appear.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.fitvids.js"></script>
+	<script src="js/styleswitcher.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    
+
+    
+    <!-- Custom Theme JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+
+        window.onload = function() {
+            document.getElementById("contactForm").reset();
+
+            const urlParams = new URLSearchParams(window.location.search);
+            // Controlla se il parametro 'thankyou' è presente
+            if (urlParams.has('esito')) {
+                console.log('esito');
+            // Nascondi il form
+            //document.getElementById('messagebox').style.display = 'none';
+            // Mostra il messaggio di ringraziamento
+            
+            $('#messagebox').modal('show');
+            }
+        }
+       setActiveStyleSheet('yellow'); XMLDocument
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get all images inside .latest-post
+            const images = document.querySelectorAll(".latest-post img");
+
+            // Get the modal and modal image elements
+            const modal = document.getElementById("imageModal");
+            const modalImage = modal.querySelector(".modal-image");
+
+            // Add click event listener to each image
+            images.forEach(function (image) {
+                image.addEventListener("click", function () {
+                    // Set the clicked image's src to the modal image
+                    modalImage.src = this.src;
+                    // Open the modal
+                    $(modal).modal("show"); // Bootstrap's modal method
+                });
+            });
+
+             // Close the modal when the close button is clicked
+            modal.querySelector(".close").addEventListener("click", function () {
+                $(modal).modal("hide");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
