@@ -445,15 +445,6 @@ Styleswitcher End
                 
                 <div class="col-md-4">
                     <div class="welcome-section text-center">
-                        <img src="images/about-02.jpg" class="img-responsive" alt="..">
-                        <h4>Office Mission & Vission</h4>
-                        <div class="border"></div>
-                        <p>Duis aute irure dolor in reprehen derit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Lorem reprehenderit</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="welcome-section text-center">
                         <img src="images/about-03.jpg" class="img-responsive" alt="..">
                         <h4>Projects</h4>
                         <div class="border"></div>
@@ -1358,7 +1349,7 @@ Styleswitcher End
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel">Last News</h5>
+                <h5 class="modal-title" id="imageModalLabel">Last News</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -1370,7 +1361,21 @@ Styleswitcher End
     </div>
 </div>
 
-
+<div class="modal fade" id="messagebox" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>thanks for the message we will reply soon and keep in touch!</h5>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- jQuery Version 2.1.1 -->
     <script src="js/jquery-2.1.1.min.js"></script>
@@ -1396,7 +1401,20 @@ Styleswitcher End
     <!-- Custom Theme JavaScript -->
     <script src="js/script.js"></script>
     <script>
-        setActiveStyleSheet('yellow'); 
+
+    window.onload = function() {
+      document.getElementById("myForm").reset();
+
+        const urlParams = new URLSearchParams(window.location.search);
+        // Controlla se il parametro 'thankyou' è presente
+        if (urlParams.has('thankyou')) {
+        // Nascondi il form
+        //document.getElementById('messagebox').style.display = 'none';
+        // Mostra il messaggio di ringraziamento
+        document.getElementById('messagebox').style.display = 'block';
+    }
+
+    setActiveStyleSheet('yellow'); 
 
     document.addEventListener("DOMContentLoaded", function () {
         // Get all images inside .latest-post
@@ -1423,42 +1441,6 @@ Styleswitcher End
     });
     </script>
 
-<script>
-    // Funzione per ottenere i parametri GET dall'URL
-    function getQueryParams() {
-        const params = {};
-        const queryString = window.location.search.substring(1);
-        const regex = /([^&=]+)=([^&]*)/g;
-        let match;
-        while (match = regex.exec(queryString)) {
-            params[decodeURIComponent(match[1])] = decodeURIComponent(match[2]);
-        }
-        return params;
-    }
-
-    // Funzione per mostrare l'alert di conferma
-    function showAlert(message) {
-        const alertContainer = document.getElementById('alert-container');
-        const alert = document.createElement('div');
-        alert.className = 'alert alert-success alert-dismissible fade show';
-        alert.role = 'alert';
-        alert.innerHTML = `
-            ${message}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        `;
-        alertContainer.appendChild(alert);
-    }
-
-    // Controlla i parametri GET all'apertura della pagina
-    document.addEventListener('DOMContentLoaded', function() {
-        const params = getQueryParams();
-        if (params['confirm']) {
-            showAlert('Conferma: ' + params['confirm']);
-        }
-    });
-</script>
 </body>
 
 </html>
