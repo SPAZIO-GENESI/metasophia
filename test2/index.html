@@ -38,6 +38,23 @@
     <!-- Colors CSS -->
     <link rel="stylesheet" type="text/css" href="css/color/green.css">
     
+    <link rel="apple-touch-icon" sizes="57x57" href="/ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/ico/favicon-16x16.png">
+    <link rel="manifest" href="/ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     
     
     <!-- Colors CSS -->
@@ -1402,43 +1419,44 @@ Styleswitcher End
     <script src="js/script.js"></script>
     <script>
 
-    window.onload = function() {
-      document.getElementById("myForm").reset();
+        window.onload = function() {
+        document.getElementById("contactForm").reset();
 
-        const urlParams = new URLSearchParams(window.location.search);
-        // Controlla se il parametro 'thankyou' è presente
-        if (urlParams.has('thankyou')) {
-        // Nascondi il form
-        //document.getElementById('messagebox').style.display = 'none';
-        // Mostra il messaggio di ringraziamento
-        document.getElementById('messagebox').style.display = 'block';
-    }
+            const urlParams = new URLSearchParams(window.location.search);
+            // Controlla se il parametro 'thankyou' è presente
+            if (urlParams.has('thankyou')) {
+            // Nascondi il form
+            //document.getElementById('messagebox').style.display = 'none';
+            // Mostra il messaggio di ringraziamento
+            document.getElementById('messagebox').style.display = 'block';
+            }
+        }
 
-    setActiveStyleSheet('yellow'); 
+        setActiveStyleSheet('yellow'); 
 
-    document.addEventListener("DOMContentLoaded", function () {
-        // Get all images inside .latest-post
-        const images = document.querySelectorAll(".latest-post img");
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get all images inside .latest-post
+            const images = document.querySelectorAll(".latest-post img");
 
-        // Get the modal and modal image elements
-        const modal = document.getElementById("imageModal");
-        const modalImage = modal.querySelector(".modal-image");
+            // Get the modal and modal image elements
+            const modal = document.getElementById("imageModal");
+            const modalImage = modal.querySelector(".modal-image");
 
-        // Add click event listener to each image
-        images.forEach(function (image) {
-            image.addEventListener("click", function () {
-                // Set the clicked image's src to the modal image
-                modalImage.src = this.src;
-                // Open the modal
-                $(modal).modal("show"); // Bootstrap's modal method
+            // Add click event listener to each image
+            images.forEach(function (image) {
+                image.addEventListener("click", function () {
+                    // Set the clicked image's src to the modal image
+                    modalImage.src = this.src;
+                    // Open the modal
+                    $(modal).modal("show"); // Bootstrap's modal method
+                });
+            });
+
+        // Close the modal when the close button is clicked
+            modal.querySelector(".close").addEventListener("click", function () {
+                $(modal).modal("hide");
             });
         });
-
-    // Close the modal when the close button is clicked
-        modal.querySelector(".close").addEventListener("click", function () {
-            $(modal).modal("hide");
-        });
-    });
     </script>
 
 </body>
