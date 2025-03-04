@@ -1424,19 +1424,20 @@ Styleswitcher End
     <script>
 
         window.onload = function() {
-        document.getElementById("contactForm").reset();
+            document.getElementById("contactForm").reset();
 
             const urlParams = new URLSearchParams(window.location.search);
             // Controlla se il parametro 'thankyou' è presente
             if (urlParams.has('esito')) {
+                console.log('esito');
             // Nascondi il form
             //document.getElementById('messagebox').style.display = 'none';
             // Mostra il messaggio di ringraziamento
-            document.getElementById('messagebox').style.display = 'block';
+            
+            $('#messagebox').modal('show');
             }
         }
-
-        setActiveStyleSheet('yellow'); 
+       setActiveStyleSheet('yellow'); XMLDocument
 
         document.addEventListener("DOMContentLoaded", function () {
             // Get all images inside .latest-post
@@ -1456,7 +1457,7 @@ Styleswitcher End
                 });
             });
 
-        // Close the modal when the close button is clicked
+             // Close the modal when the close button is clicked
             modal.querySelector(".close").addEventListener("click", function () {
                 $(modal).modal("hide");
             });
