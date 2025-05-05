@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Parametri Modello</title>
+</head>
+<body>
+  <h1>Parametri Addestrabili del Modello</h1>
+  <div id="params">Caricamento...</div>
+
+  <script>
+    (async () => {
+      try {
+        // Sostituisci con l'URL del tuo backend locale
+        const response = await fetch('https://mstunnpub.spaziogenesi.org/params/');
+        
+        if (!response.ok) {
+          throw new Error(`Errore HTTP: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        
+        if (data.error) {
+          throw new Error(data.error);
+        }
+        
+        document.getElementById('params').textContent = 
+          `${data.trainable_params.toLocaleString()} parametri addestrabili`;
+          
+      } catch (err) {
+        console.error('Errore:', err);
+        document.getElementById('params').textContent = 
+          'ERRORE: ' + (err.message || 'Impossibile recuperare i parametri');
+      }
+    })();
+  </script>
+</body>
+</html>
