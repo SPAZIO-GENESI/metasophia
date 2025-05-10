@@ -1505,9 +1505,9 @@ Styleswitcher End
             });
         });
     </script>
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Funzioni per gestire i cookie
         function setCookie(name, value, days) {
             var expires = "";
             if (days) {
@@ -1517,7 +1517,7 @@ Styleswitcher End
             }
             document.cookie = name + "=" + (value || "") + expires + "; path=/";
         }
-
+    
         function getCookie(name) {
             var nameEQ = name + "=";
             var ca = document.cookie.split(';');
@@ -1528,82 +1528,43 @@ Styleswitcher End
             }
             return null;
         }
-
-        // Funzione per aggiornare il contatore con il valore dall'API o dal cookie
+    
         async function updateModelParamsCounter() {
-            const timerElement = document.getElementById('item4');
-            if (!timerElement) return;
-
+            const $timer = $('#item4');
+            let paramsCount = 0;
+    
             try {
                 const response = await fetch('https://mstunnpub.spaziogenesi.org/model/params/');
                 if (!response.ok) throw new Error('Network response was not ok');
-                
+    
                 const data = await response.json();
-                const paramsCount = data.trainable_params || 0;
-                
-                // Salva il valore nel cookie (valido per 7 giorni)
+                paramsCount = data.trainable_params || 0;
+    
                 setCookie('lastParamsCount', paramsCount, 7);
-                
-                // Aggiorna l'elemento
-                updateCounterElement(timerElement, paramsCount);
-                
+    
             } catch (error) {
                 console.error('Error fetching model params:', error);
-                
-                // Prova a recuperare l'ultimo valore dal cookie
+    
                 const lastCount = getCookie('lastParamsCount');
-                const fallbackCount = lastCount ? parseInt(lastCount) : 11705408;
-                
-                updateCounterElement(timerElement, fallbackCount);
+                paramsCount = lastCount ? parseInt(lastCount) : 11705408;
             }
-        }
-
-        // Funzione per aggiornare l'elemento del contatore
-        function updateCounterElement(element, value) {
-            element.setAttribute('data-to', value);
-            element.textContent = value.toLocaleString();
-            
-            if (window.countUpInitialized) {
-                initCounters(); // Reinizializza il contatore con il nuovo valore
-            }
-        }
-
-        // Funzione per inizializzare i contatori
-        function initCounters() {
-            window.countUpInitialized = true;
-            $('.timer').each(function() {
-                var $this = $(this);
-                $this.appear(function() {
-                    var to = $this.attr('data-to');
-                    var speed = $this.attr('data-speed');
-                    $({countNum: $this.text().replace(/,/g, '')}).animate({
-                        countNum: to
-                    }, {
-                        duration: parseInt(speed),
-                        easing: 'linear',
-                        step: function() {
-                            $this.text(Math.floor(this.countNum).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-                        },
-                        complete: function() {
-                            $this.text(this.countNum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-                        }
-                    });
-                });
+    
+            // Forza reset del contatore
+            $timer.text('0');
+    
+            // Avvia solo questo counter con countTo
+            $timer.countTo({
+                from: 0,
+                to: paramsCount,
+                speed: 5000,
+                refreshInterval: 50
             });
         }
-        
-        // Chiamata iniziale per aggiornare il contatore
+    
         updateModelParamsCounter();
-        
-        // Inizializza i contatori quando la pagina è pronta
-        $(document).ready(function() {
-            initCounters();
-        });
-        
-        // Aggiorna periodicamente (opzionale)
-        //setInterval(updateModelParamsCounter, 60000); // Aggiorna ogni minuto
     });
-</script>
+    </script>
+        
 </body>
 
 </html>
