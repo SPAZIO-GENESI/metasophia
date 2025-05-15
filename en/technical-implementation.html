@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Same head section as original template -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MetaSophia AI - Technical Implementation Details">
+    <meta name="author" content="MetaSophia Team">
+
+    <title>MetaSophia AI - Technical Implementation</title>
+
+    <!-- All CSS files from original template -->
+    <!-- Bootstrap Core CSS -->
+    <link href="/ver2/asset/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="/ver2/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link href="/ver2/css/animate.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/ver2/css/style.css" rel="stylesheet">
+    <link href="/ver2/css/responsive.css" rel="stylesheet">
+    <!-- Colors CSS -->
+    <link rel="stylesheet" type="text/css" href="/ver2/css/color/green.css">
+    
+    <!-- Favicons from original template -->
+</head>
+
+<body class="index">
+    <!-- Navigation (same as original) -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>   
+                <a class="navbar-brand page-scroll" href="/"><img class="logo" src="/ver2/images/logos/Asset 3.png"><span> MetaSophia</span></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="https://t.me/MetaSophiaBot">BOT TELEGRAM</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/#about-us">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/#service">Areas</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/#team">Team</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/#latest-news">Latest News</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/#partner">Partner</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Technical Implementation Header -->
+    <section id="page-top" class="technical-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>Technical Implementation</h1>
+                    <p class="lead">Detailed architecture and implementation of our AI models</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Model Architecture Section -->
+    <section id="model-architecture" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <h2>Model Architecture</h2>
+                        <p>Core components of our AI system</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Base Model</h3>
+                    <ul class="tech-list">
+                        <li><strong>ResNet18</strong> - Pretrained on ImageNet</li>
+                        <li>Fine-tuned on our specialized dataset</li>
+                        <li>Modified final layers for our classification task</li>
+                    </ul>
+                    
+                    <h3>Framework</h3>
+                    <ul class="tech-list">
+                        <li><strong>Fastai</strong> - For simplified training pipeline</li>
+                        <li>Advanced callback integration</li>
+                        <li>Mixed precision training</li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-6">
+                    <h3>Dataset Structure</h3>
+                    <ul class="tech-list">
+                        <li>Organized by class folders (incisioni/, fotografie/, etc.)</li>
+                        <li>Balanced class distribution</li>
+                        <li>Metadata annotations for future expansion</li>
+                    </ul>
+                    
+                    <div class="text-center">
+                        <img src="/ver2/images/tech-architecture.png" alt="Model Architecture" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Pipeline Section -->
+    <section id="training-pipeline" class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <h2>Training Pipeline</h2>
+                        <p>Our end-to-end model development process</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Data Loading & Augmentation</h3>
+                    <ul class="tech-list">
+                        <li><strong>ImageDataLoaders.from_folder</strong> for automatic dataset splitting</li>
+                        <li><strong>Data Augmentation</strong>:
+                            <ul>
+                                <li>Rotations (±20°)</li>
+                                <li>Zoom (up to 1.2x)</li>
+                                <li>Brightness variations (±40%)</li>
+                                <li>Perspective warping</li>
+                            </ul>
+                        </li>
+                        <li>Train/Valid split (80%/20%) with fixed random seed (42)</li>
+                        <li>Dynamic image resizing (configurable via slider)</li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-6">
+                    <h3>Training Parameters</h3>
+                    <ul class="tech-list">
+                        <li><strong>Epochs</strong>: Configurable (default: 5)</li>
+                        <li><strong>Batch Size</strong>: Adjustable (default: 32)</li>
+                        <li><strong>Optimizer</strong>: Adam with weight decay</li>
+                        <li><strong>Learning Rate</strong>: 1e-3 with cosine annealing</li>
+                        <li><strong>Metrics</strong>: Accuracy, Error Rate</li>
+                    </ul>
+                    
+                    <h3>HuggingFace Space</h3>
+                    <p>We've deployed a demo version of our model on HuggingFace Spaces:</p>
+                    <a href="https://huggingface.co/SpazioGenesiETS" class="btn btn-primary" target="_blank">
+                        <i class="fa fa-external-link"></i> Visit our HuggingFace Space
+                    </a>
+                    <p class="small mt-2">Our HuggingFace space features:</p>
+                    <ul>
+                        <li>Interactive model demo</li>
+                        <li>Example predictions</li>
+                        <li>Model card with technical details</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evaluation Section -->
+    <section id="evaluation" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <h2>Model Evaluation</h2>
+                        <p>Performance metrics and validation</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Confusion Matrix</h3>
+                    <img src="/ver2/images/metasophia_confusionmatrix.jpg" alt="Confusion Matrix" class="img-responsive">
+                </div>
+                
+                <div class="col-md-6">
+                    <h3>Key Metrics</h3>
+                    <div class="metrics-table">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Overall Accuracy</td>
+                                    <td>92.3%</td>
+                                </tr>
+                                <tr>
+                                    <td>Precision (Avg)</td>
+                                    <td>91.8%</td>
+                                </tr>
+                                <tr>
+                                    <td>Recall (Avg)</td>
+                                    <td>92.1%</td>
+                                </tr>
+                                <tr>
+                                    <td>F1 Score (Avg)</td>
+                                    <td>91.9%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h3>Class-wise Performance</h3>
+                    <p>The model shows particular strength in distinguishing between:</p>
+                    <ul>
+                        <li>Lithography vs. Etching</li>
+                        <li>Albumen prints vs. Silver gelatin</li>
+                        <li>Woodcut vs. Engraving</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Improvements Section -->
+    <section id="future" class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <h2>Future Improvements</h2>
+                        <p>Planned enhancements to our system</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="fa fa-cogs"></i>
+                        <h4>Model Architecture</h4>
+                        <ul>
+                            <li>Upgrade to ResNet34/50</li>
+                            <li>Experiment with Vision Transformers</li>
+                            <li>Attention mechanisms</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="fa fa-database"></i>
+                        <h4>Data Expansion</h4>
+                        <ul>
+                            <li>Expand to 50+ print techniques</li>
+                            <li>High-resolution scans</li>
+                            <li>Multispectral imaging</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="fa fa-cloud"></i>
+                        <h4>Deployment</h4>
+                        <ul>
+                            <li>API endpoints</li>
+                            <li>Batch processing</li>
+                            <li>Integration with archival systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as original template) -->
+    <footer class="style-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xs-12">
+                    <span class="copyright">Copyright &copy; MetaSophia 2025</span>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <div class="footer-social text-center">
+                        <ul>
+                            <li><a href="https://www.facebook.com/spaziogenesi/"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/spazio-genesi-ets/"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://www.instagram.com/spaziogenesi/"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <div class="footer-link">
+                        <ul class="pull-right">
+                            <li><a href="/privacy">Privacy Policy</a></li>
+                            <li><a href="/terms">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- All JavaScript files from original template -->
+    <!-- jQuery Version 2.1.1 -->
+    <script src="/ver2/js/jquery-2.1.1.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/ver2/asset/js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="/ver2/js/jquery.easing.1.3.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="/ver2/js/script.js"></script>
+</body>
+</html>

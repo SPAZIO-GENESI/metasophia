@@ -2010,3 +2010,56 @@ iframe {
 }
 
 
+/* Technical Page Styles */
+.technical-header {
+    padding: 120px 0 80px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/3079617.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: #f9f9f9;
+}
+
+.tech-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.tech-list li {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.tech-list li:before {
+    content: "•";
+    color: #4CAF50;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+
+.feature-box {
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.feature-box i {
+    font-size: 40px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.metrics-table {
+    margin-top: 20px;
+}
